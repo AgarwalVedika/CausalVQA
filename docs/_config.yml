@@ -19,16 +19,16 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Towards Causal VQA #- Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing 
-email: rshetty@mpi-inf.mpg.de
+# Build settings
+theme: jekyll-theme-cayman
 description: >- # this means to ignore newlines until "baseurl:"
   CVPR 2020 
 baseurl: "/CauslVQA" # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://rakshithshetty.github.io" # the subpath of your site, e.g. /blog
-twitter_username: jekyllrb
-github_username:  jekyll
+owner:
+    name: Rakshith Shetty
+    email: rshetty@mpi-inf.mpg.de
 
-# Build settings
-theme: jekyll-theme-cayman
 
 # Exclude from processing.
 # The following items will not be processed, by default.
