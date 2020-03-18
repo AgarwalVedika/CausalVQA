@@ -18,13 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Towards Causal VQA #- Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing 
+title: "Towards Causal VQA" #- Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing 
 # Build settings
+markdown: kramdown
 theme: jekyll-theme-cayman
-description: >- # this means to ignore newlines until "baseurl:"
-  CVPR 2020 
-baseurl: "/CauslVQA" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://rakshithshetty.github.io" # the subpath of your site, e.g. /blog
+description: "CVPR 2020 paper"
+url: "https://rakshithshetty.github.io/CauslVQA" # the subpath of your site, e.g. /blog
 owner:
     name: Rakshith Shetty
     email: rshetty@mpi-inf.mpg.de
