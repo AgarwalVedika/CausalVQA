@@ -235,10 +235,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.3)
-      tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -246,11 +243,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 204)
-  jekyll-feed (~> 0.12)
-  jekyll-theme-cayman
-  tzinfo (~> 1.2)
-  tzinfo-data
-  wdm (~> 0.1.1)
 
 BUNDLED WITH
    2.1.4
