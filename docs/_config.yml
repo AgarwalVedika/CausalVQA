@@ -18,16 +18,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Towards Causal VQA" #- Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing 
+title: "Towards Causal VQA " #- Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing"
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-cayman
-description: "CVPR 2020 paper"
-url: "https://rakshithshetty.github.io/CauslVQA" # the subpath of your site, e.g. /blog
+#remote_theme: "mmistakes/minimal-mistakes@4.19.1"
+description: Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing. 
+#description: ""
+url: "https://rakshithshetty.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/CausalVQA" # the subpath of your site, e.g. /blog
+show_downloads: true
 owner:
     name: Rakshith Shetty
     email: rshetty@mpi-inf.mpg.de
 
+paper_url: "https://arxiv.org/abs/1912.07538" 
+datasetlink: "https://rakshithshetty.github.io/CausalVQA/#Dataset"
+#plugins:
+#    - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
