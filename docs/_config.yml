@@ -24,10 +24,13 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 #remote_theme: "mmistakes/minimal-mistakes@4.19.1"
 description: Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing. 
+tagline: Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing 
 #description: ""
 url: "https://rakshithshetty.github.io" # the subpath of your site, e.g. /blog
 baseurl: "/CausalVQA" # the subpath of your site, e.g. /blog
 show_downloads: true
+show_tagline: true
+auth_color: "color:#EFF3D1"
 owner:
     name: Rakshith Shetty
     email: rshetty@mpi-inf.mpg.de

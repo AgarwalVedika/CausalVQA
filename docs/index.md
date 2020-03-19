@@ -1,16 +1,24 @@
 ---
 layout: default
 ---
-Vedika Agarwal, [Rakshith Shetty](https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/rakshith-shetty/), [Mario Fritz](https://scalable.mpi-inf.mpg.de/)
-{: style="font-size: 120%; text-align: center;"}
 
 {:refdef: style="text-align: center;"}
 ![teaser](images/teaser.gif){:width="90%"}
 {: refdef}
 
+# Bibtex
 
-Abstract
-==================
+~~~~~~~~~~~~~~~~
+@inproceedings{agarwal2020towards,
+  title={Towards Causal VQA: Revealing and Reducing Spurious Correlations by Invariant and Covariant Semantic Editing}
+  author={Agarwal, Vedika and Shetty, Rakshith and Fritz, Mario},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2020}
+}
+~~~~~~~~~~~~~~~~
+
+# Abstract
+
 *Despite significant success in Visual Question Answering (VQA), VQA models have been shown to be notoriously brittle to linguistic variations in the questions. Due to deficiencies in models and datasets, today's models often rely on correlations rather than predictions that are causal w.r.t. data.
 In this paper, we propose a novel way to analyze and measure the robustness of the state of the art models w.r.t semantic visual variations as well as propose ways to make models more robust against spurious correlations.
 Our method performs automated semantic image manipulations and tests for consistency in model predictions to quantify the model robustness as well as generate synthetic data to counter these problems.
