@@ -5,7 +5,7 @@ Vedika Agarwal, [Rakshith Shetty](https://www.mpi-inf.mpg.de/departments/compute
 {: style="font-size: 120%; text-align: center;"}
 
 {:refdef: style="text-align: center;"}
-![teaser](images/teaser.gif){:width="100%"}
+![teaser](images/teaser.gif){:width="90%"}
 {: refdef}
 
 
@@ -18,8 +18,7 @@ We perform our analysis on three diverse, state of the art VQA models and divers
 {: style="font-size: 110%; text-align: left;"}
 
 
-<a name="#Dataset"></a> Dataset
-==================
+# Dataset
 
 ## Invariant-VQA (IV-VQA)
 

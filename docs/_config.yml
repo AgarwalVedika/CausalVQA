@@ -33,7 +33,7 @@ owner:
     email: rshetty@mpi-inf.mpg.de
 
 paper_url: "https://arxiv.org/abs/1912.07538" 
-datasetlink: "https://rakshithshetty.github.io/CausalVQA/#Dataset"
+datasetlink: "https://rakshithshetty.github.io/CausalVQA/#dataset"
 #plugins:
 #    - jekyll-include-cache
 
