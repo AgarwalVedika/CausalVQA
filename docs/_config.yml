@@ -31,9 +31,12 @@ baseurl: "/CausalVQA" # the subpath of your site, e.g. /blog
 show_downloads: true
 show_tagline: true
 auth_color: "color:#EFF3D1"
+aff_color: "color:#000000"
 owner:
     name: Rakshith Shetty
     email: rshetty@mpi-inf.mpg.de
+author:
+    name: Rakshith Shetty
 
 paper_url: "https://arxiv.org/abs/1912.07538" 
 datasetlink: "https://rakshithshetty.github.io/CausalVQA/#dataset"
