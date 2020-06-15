@@ -1,0 +1,4 @@
+/pretrained_removal_models/checkpoint_stargan_coco_fulleditor_wgan_40pcUnion_msz32_withPmask_L1150_tv_nb4_256sz_sqznet_250_1951.pth.tar
+/coco_classes_train2014_images.json
+/coco_classes_val2014_images.json
+.idea/
