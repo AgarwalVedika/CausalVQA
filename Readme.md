@@ -13,7 +13,7 @@ Repository for the paper "Towards Causal VQA: Revealing and Reducing Spurious Co
 
 ## Dataset Generation
 
-We use a pre-trained object removal model (https://github.com/rakshithShetty/adversarial-object-removal). Please find the 512x512 removal GAN used by us here: <GIVE LINK- GOOGLE DRIVE?>. Make sure it is stored in pre_removal_models folder.
+We use a pre-trained object removal model. Please find the 512x512 removal GAN used by us here: <GIVE LINK- GOOGLE DRIVE?>. Make sure it is stored in pre_removal_models folder.
 
 1. Generating IV-VQA dataset:
 
