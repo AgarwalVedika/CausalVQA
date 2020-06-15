@@ -11,7 +11,7 @@ Repository for the paper "Towards Causal VQA: Revealing and Reducing Spurious Co
 }
 ~~~~~~~~~~~~~~~~
 
-## Code coming soon
+## Dataset Generation
 
 1. Generating IV-VQA dataset:
 
