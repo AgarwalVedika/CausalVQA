@@ -16,6 +16,10 @@ Repository for the paper "Towards Causal VQA: Revealing and Reducing Spurious Co
 1. Generating IV-VQA dataset:
 
 ```
-python iv_image_gen.py  # for all the images, generate an exhaustive set of images with one object (all instances) removed at a time.
+python iv_image_gen.py --input_mode train2014  
+python iv_image_gen.py --input_mode val2014  
 ```
+
+For all the images in train/val, generate an exhaustive set of images with one object (all instances) removed at a time.
+
 
