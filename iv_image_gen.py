@@ -11,6 +11,7 @@ from data_loader_stargan import CocoMaskDataset
 from pycocotools.coco import COCO
 import scipy.misc as sc
 import json
+import config
 from PIL import Image
 from my_snippets import show2, repeated_images
 from my_snippets import visualizing_images_masks_batch
@@ -32,8 +33,8 @@ def main(args):
     input_mode = args.input_mode
     print(input_mode)
 
-    root_output_dir = '/BS/vedika2/nobackup/thesis/flipped_edited_VQA_v2/'
-    root_image_dir = '/BS/databases10/VQA_v2/Images/'
+    root_output_dir = config.iv_images_dir
+    root_image_dir = config.vqa_images_dir
     output_dir = os.path.join(root_output_dir, input_mode + '/')
     image_dir = os.path.join(root_image_dir, input_mode + '/')
 
@@ -41,8 +42,8 @@ def main(args):
     image_ids = json.load(open(images_json_path, 'r'))['image_ids']### images_ids are redundant
     classes_ids_img = json.load(open(images_json_path, 'r'))['classes_ids_img']### images_ids are redundant
 
-    ann_coco_file_val = '/BS/databases/coco/annotations/instances_' + input_mode + '.json'
-    coco = COCO(ann_coco_file_val)
+    ann_coco_file = config.coco_ann_dir + 'instances_' + input_mode + '.json'
+    coco = COCO(ann_coco_file)
     if output_dir is not None:
         if not os.path.exists(output_dir):
             os.makedirs(os.path.dirname(output_dir))
@@ -79,24 +80,7 @@ def main(args):
     loader = imgDataLoader(**loader_kwargs)
     gtMaskDataset = CocoMaskDataset(transform=None, mode=input_mode)
 
-    # # Pre-trained models
-    # 128
-    # x128
-    # resoluion --> / BS / rshetty - wrk / work / code / controlled - generation / trained_models_2 / stargan / fulleditor / final_models /
-    # checkpoint_stargan_coco_fulleditor_LowResMask_pascal_RandDiscrWdecay_wgan_30pcUnion_noGT_imnet_V2_msz32_ftuneMask_withPmask_L1150_tv_nb4_styleloss3k_248_1570.pth.tar
-    #
-    # 256
-    # x256
-    # resolution --> / BS / rshetty - wrk / work / code / controlled - generation / trained_models_2 / stargan / fulleditor /
-    # checkpoint_stargan_coco_fulleditor_wgan_50pcUnion_msz32_withPmask_L1150_style3k_tv_nb4_512sz_sqznet_mgpu_b14_255_3483.pth.tar
-    #
-    # 512
-    # x512
-    # resolution --> / BS / rshetty - wrk / work / code / controlled - generation / trained_models_2 / stargan / fulleditor /
-    # checkpoint_stargan_coco_fulleditor_wgan_40pcUnion_msz32_withPmask_L1150_tv_nb4_256sz_sqznet_250_1951.pth.tar
-
-    removal_pretrained = '/BS/rshetty-wrk/work/code/controlled-generation/trained_models_2/stargan/fulleditor/' \
-                         'checkpoint_stargan_coco_fulleditor_wgan_50pcUnion_msz32_withPmask_L1150_style3k_tv_nb4_512sz_sqznet_mgpu_b14_255_3483.pth.tar'
+    removal_pretrained = config.removal_model_512
     remover = ObjectRemover(removal_model=removal_pretrained, dilateMask=5)
 
     if args.use_gpu == 1:
