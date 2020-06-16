@@ -10,7 +10,8 @@ Repository for the paper "Towards Causal VQA: Revealing and Reducing Spurious Co
   year={2020}
 }
 ~~~~~~~~~~~~~~~~
-##Installation
+
+## Installation
 Use Anaconda to set up an environment and install the dependencies listed in requirements.txt file
 ```
 conda create --name <env> --file requirements.txt
