@@ -1,13 +1,13 @@
 # vqa images
-vqa_images_dir = "/BS/databases10/VQA_v2/Images/"  #'/BS/vedika2/nobackup/thesis/flipped_edited_VQA_v2/'
-vqa_q_dir = "/BS/databases10/VQA_v2/Questions/"
-vqa_a_dir = "/BS/databases10/VQA_v2/Annotations/"
+vqa_images_dir = "VQA_v2/Images/"  #'/BS/vedika2/nobackup/thesis/flipped_edited_VQA_v2/'
+vqa_q_dir = "VQA_v2/Questions/"
+vqa_a_dir = "VQA_v2/Annotations/"
 
 
 ## coco annotations
-coco_ann_dir =  "/BS/databases/coco/annotations/"
-ann_coco_file_val = '/BS/databases/coco/annotations/instances_val2014.json'
-ann_coco_file_train = '/BS/databases/coco/annotations/instances_train2014.json'
+coco_ann_dir =  "coco/annotations/"
+ann_coco_file_val = 'coco/annotations/instances_val2014.json'
+ann_coco_file_train = 'coco/annotations/instances_train2014.json'
 
 
 #pre-trained object rmeoval models

@@ -10,6 +10,16 @@ Repository for the paper "Towards Causal VQA: Revealing and Reducing Spurious Co
   year={2020}
 }
 ~~~~~~~~~~~~~~~~
+##Installation
+Use Anaconda to set up an environment and install the dependencies listed in requirements.txt file
+```
+conda create --name <env> --file requirements.txt
+```
+
+Clone this repository with Git, and then enter the root directory of the repository:
+```
+git clone https://github.com/AgarwalVedika/CausalVQA.git && cd CausalVQA
+```
 
 ## Dataset Generation
 
@@ -52,7 +62,7 @@ Similarly we will generate the CV-VQA dataset, since words extraction was alread
 cd ./../cv_vqa_generation
 python cv_vqa_gen_images.py --input_mode train2014  #images
 python cv_vqa_gen_images.py --input_mode val2014  #images
-cv_vqa_gen_area_overlap_score.ipynb  #get area/overlap    run the jupyter notebook
+cv_vqa_gen_area_overlap_score.ipynb  #run the jupyter notebook to get area/overlap
 python cv_vqa_gen_qa.py  #QA
 ```
 
