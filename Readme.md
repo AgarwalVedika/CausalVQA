@@ -19,13 +19,19 @@ We use a pre-trained object removal model. Please find the 512x512 removal GAN u
 
 Images
 ```
-python iv_image_gen.py --input_mode train2014  
-python iv_image_gen.py --input_mode val2014  
+python iv_vqa_gen_images.py --input_mode train2014  
+python iv_vqa_gen_images.py --input_mode val2014  
 ```
 
 For all the images in train/val, generate an exhaustive set of images with one object (all instances) removed at a time.
 
 QA
+
+please change the directory:
+```
+cd iv_vqa_gen_qa
+```
+
 First we do some vocab mapping and word extraction. Please note: vocab_mapping.py has a function mapping the VQA vocab to 80 COCO objects. 
 
 ```
@@ -33,9 +39,18 @@ python iv_vqa_nouns_extractor_questions.py
 python iv_vqa_nouns_extractor_answers.py
 ```
 
-then a script to calculate area/overlapping using gt coco segmentations used for creating final QA jsons: 
-/BS/vedika2/nobackup/thesis/code/get_areas_overlap.py
+Run the command below to calculate area/overlapping using gt coco segmentations. This is needed for creating final QA jsons files. 
+```
+python get_areas_overlap.py
+```
 
+Finally use the below two jupyter notebooks to prepare the QA json files.
+```
+ques: gen_ans_json.ipynb 
+ans: gen_ques_json.ipynb
+```
+
+After this step, you will have all the images,questions and answers for IV-VQA dataset.
 
 
 ## Acknowledgements
