@@ -2,3 +2,7 @@
 /coco_classes_train2014_images.json
 /coco_classes_val2014_images.json
 .idea/
+/iv_vqa_generation/tagged_train2014_answers.json
+/iv_vqa_generation/tagged_train2014_questions.json
+/iv_vqa_generation/tagged_val2014_answers.json
+/iv_vqa_generation/tagged_val2014_questions.json

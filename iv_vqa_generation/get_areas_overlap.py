@@ -43,10 +43,8 @@ with open("coco-labels/coco_labels_80_classes.txt") as f:
 
 ann_coco_file_val = config.coco_ann_dir + 'instances_val2014.json'
 ann_coco_file_train = config.coco_ann_dir + 'instances_train2014.json'
-
 with open(ann_coco_file_train) as f:
     ann_coco_1 = json.load(f)['categories']
-
 
 id_list = []
 class_list = []

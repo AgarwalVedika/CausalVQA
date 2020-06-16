@@ -39,7 +39,6 @@ def main(args):
     images_json_path = 'coco_classes_' + input_mode + '_images.json'
     image_ids = json.load(open(images_json_path, 'r'))['image_ids']### images_ids are redundant
     classes_ids_img = json.load(open(images_json_path, 'r'))['classes_ids_img']### images_ids are redundant
-
     ann_coco_file = config.coco_ann_dir + 'instances_' + input_mode + '.json'
     coco = COCO(ann_coco_file)
     if output_dir is not None:
@@ -77,7 +76,6 @@ def main(args):
 
     loader = imgDataLoader(**loader_kwargs)
     gtMaskDataset = CocoMaskDataset(transform=None, mode=input_mode)
-
     removal_pretrained = config.removal_model_512
     remover = ObjectRemover(removal_model=removal_pretrained, dilateMask=5)
 

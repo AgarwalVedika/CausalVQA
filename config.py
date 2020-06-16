@@ -18,3 +18,8 @@ removal_model_512 = "/pretrained_removal_models/checkpoint_stargan_coco_fulledit
 iv_images_dir = "iv_vqa/Images/"
 iv_q_dir = "iv_vqa/Questions/"
 iv_a_dir = "iv_vqa/Annotations"
+
+# cv_vqa
+cv_images_dir = "cv_vqa/Images/"
+cv_q_dir = "cv_vqa/Questions/"
+cv_a_dir = "cv_vqa/Annotations"
