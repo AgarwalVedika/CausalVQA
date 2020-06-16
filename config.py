@@ -9,10 +9,8 @@ coco_ann_dir =  "coco/annotations/"
 ann_coco_file_val = 'coco/annotations/instances_val2014.json'
 ann_coco_file_train = 'coco/annotations/instances_train2014.json'
 
-
 #pre-trained object rmeoval models
-removal_model_512 = "/pretrained_removal_models/checkpoint_stargan_coco_fulleditor_wgan_40pcUnion_msz32_withPmask_L1150_tv_nb4_256sz_sqznet_250_1951.pth.tar"
-
+removal_model_256 = "pretrained_removal_models/checkpoint_stargan_coco_fulleditor_wgan_50pcUnion_msz32_withPmask_L1150_style3k_tv_nb4_512sz_sqznet_mgpu_b14_255_3483.pth.tar"
 
 # iv_vqa
 iv_images_dir = "iv_vqa/Images/"

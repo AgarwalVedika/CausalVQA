@@ -76,7 +76,7 @@ def main(args):
 
     loader = imgDataLoader(**loader_kwargs)
     gtMaskDataset = CocoMaskDataset(transform=None, mode=input_mode)
-    removal_pretrained = config.removal_model_512
+    removal_pretrained = config.removal_model_256
     remover = ObjectRemover(removal_model=removal_pretrained, dilateMask=5)
 
     if args.use_gpu == 1:

@@ -15,15 +15,15 @@ Use Anaconda to set up an environment and install the dependencies listed in req
 ```
 conda create --name <env> --file requirements.txt
 ```
-
 Clone this repository with Git, and then enter the root directory of the repository:
 ```
 git clone https://github.com/AgarwalVedika/CausalVQA.git && cd CausalVQA
 ```
 
+
 ## Dataset Generation
 
-We use a pre-trained object removal model. Please find the 512x512 removal GAN used by us here: https://drive.google.com/file/d/1dIq-AGcUYSTf6QsOdvSoEJFcJk7MUxed/view?usp=sharing. Make sure it is stored in pre_removal_models folder.
+We use a pre-trained object removal model. The model is available here: https://drive.google.com/file/d/1E5niomHg0jsnkXGVWj5yut_nbZ5T6grN/view?usp=sharing 
 
 ### Generating IV-VQA dataset:
 
