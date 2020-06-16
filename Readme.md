@@ -17,12 +17,25 @@ We use a pre-trained object removal model. Please find the 512x512 removal GAN u
 
 1. Generating IV-VQA dataset:
 
+Images
 ```
 python iv_image_gen.py --input_mode train2014  
 python iv_image_gen.py --input_mode val2014  
 ```
 
 For all the images in train/val, generate an exhaustive set of images with one object (all instances) removed at a time.
+
+QA
+First we do some vocab mapping and word extraction. Please note: vocab_mapping.py has a function mapping the VQA vocab to 80 COCO objects. 
+
+```
+python iv_vqa_nouns_extractor_questions.py
+python iv_vqa_nouns_extractor_answers.py
+```
+
+then a script to calculate area/overlapping using gt coco segmentations used for creating final QA jsons: 
+/BS/vedika2/nobackup/thesis/code/get_areas_overlap.py
+
 
 
 ## Acknowledgements
