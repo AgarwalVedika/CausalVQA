@@ -2,9 +2,6 @@ from __future__ import absolute_import, division, print_function
 import os
 import argparse
 import time
-
-from object_remover import ObjectRemover
-
 import torch
 import torchvision.transforms as transforms
 from data_loader_stargan import CocoMaskDataset
@@ -13,11 +10,12 @@ import scipy.misc as sc
 import json
 import config
 from PIL import Image
+from object_remover import ObjectRemover
 from my_snippets import show2, repeated_images
 from my_snippets import visualizing_images_masks_batch
+from my_snippets import final_target_list, repeated_image_list, save_image_batch
 from data_loader_custom import imgDataLoader
 from data_loader_stargan import CocoMaskDataset
-from my_snippets import final_target_list, repeated_image_list, save_image_batch
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--use_gpu', default=1, type=int)
