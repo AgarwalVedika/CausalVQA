@@ -71,7 +71,7 @@ python cv_vqa_gen_qa.py  #QA
 
 ## Analysis
 
-We use 3 models: SNMN, SAAA and CNN+LSTM.  We train the models as decribed by the authors. 
+We use 3 models: Stack Neural Module Networks(SNMN), Show-Ask-Attend-Answer(SAAA) and CNN+LSTM.  
 Make sure to save the answer id, image id, question id and the softmax vector (this helps for visualization) for analysis.  
 Keys used in analysis code to refer these are: 'ans_id', 'img_id', 'ques_id' and 'ss_vc'.
 
@@ -96,10 +96,10 @@ python on_pick_all3_counting_del1.py  #cv_vqa
 
 ## Acknowledgements
 Object removal code is inspired from the Object removal GAN repository (https://github.com/rakshithShetty/adversarial-object-removal). 
-To train SNMN, SAAA and CNN+LSTM, we follow the code repositories below. CNN+LSTM is built by modifying SAAA code. 
+To train SNMN and SAAA, we follow the code repositories below. 
 For SNMN: https://github.com/ronghanghu/snmn
 For SAAA: https://github.com/Cyanogenoid/pytorch-vqa
-
+CNN+LSTM is built by modifying SAAA code. 
 
 ## Miscellaneous
 For CNN+LSTM/SAAA and training these models using data augmentation while enforcing different consistency losses: one can take a look at 
