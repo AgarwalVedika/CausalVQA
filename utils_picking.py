@@ -1,16 +1,8 @@
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
 import json
-import time
 import ipdb
-import cv2
-import os
 import pickle
-import nltk
 import time
-import random
-
 
 
 def my_read_old(results_old_pkl, standard_q_json, standard_a_json=None):
@@ -155,7 +147,7 @@ def my_read_old_val_90_10(results_old_pkl, standard_q_json, standard_a_json , if
         if len((set(q_ids) & set(qid_res))) != len(set(q_ids)):
             print()
             print(
-                ' DISCREPANCY ALERT- SIMILAR TO WHAT YOU SAW IN CASE OF SAA/CNN_LSTM WHEN YOU WERE TESTING ON TRAIN  ')
+                ' DISCREPANCY ALERT ')
             print()
             target_q_ids = list((set(q_ids) & set(qid_res)))
         else:  ## ideally q_ids is a strict subset of res_qids...
@@ -186,107 +178,6 @@ def my_read_old_val_90_10(results_old_pkl, standard_q_json, standard_a_json , if
 
         print(time.time() - st)
     return q_ids, pred_ans, softmax_vector, img_ids, ques_str, all_answers, ques_type_data, ans_type_data  # ,gt_ans_used
-
-
-# def my_read_hack(results_old_pkl, standard_q_json, standard_a_json):
-#     st = time.time()
-#     with open(results_old_pkl, 'rb') as file:
-#         res_val = pickle.load(file)
-#     if str(standard_q_json)[-4:] == 'json':
-#         with open(standard_q_json) as file:
-#             details_ques = json.load(file)['questions']
-#     else:
-#         with open(standard_q_json, 'rb') as file:
-#             details_ques = pickle.load(file)['questions']
-#
-#     ## from results file- model specific
-#     pred_ans = [details['ans_id'] for details in res_val]
-#     softmax_vector = [details['ss_vc'] for details in res_val]
-#     img_id_res = [details['img_id'] for details in res_val]
-#     qid_res = [details['ques_id'] for details in res_val]
-#     # gt_ans_used = [details['gt_ans_id_used'] for details in res_val] ## in case of snmn
-#     # q_ids = [details['ques_id'] for details in res_val]     ### in cases of snmn
-#     # assert (q_ids == [details_q['question_id'] for details_q in details_ques])
-#
-#     q_ids = [details_q['question_id'] for details_q in details_ques]
-#     img_ids = [details_q['image_id'] for details_q in details_ques]
-#     ques_str = [details_q['question'] for details_q in details_ques]
-#
-#     with open(standard_a_json) as file:
-#         details_ann = json.load(file)['annotations']
-#     all_answers = [[ans['answer'] for ans in details_ann[i]['answers']] for i in range(len(img_ids))]
-#     # most_freq_ans = [details_ann[i]['multiple_choice_answer'] for i in range(len(img_ids))]
-#     ques_type_data = [details_ann[i]['question_type'] for i in range(len(img_ids))]
-#     ans_type_data = [details_ann[i]['answer_type'] for i in range(len(img_ids))]
-#
-#
-#     #q_ids, pred_ans, softmax_vector, img_ids, ques_str, all_answers, ques_type_data, ans_type_data
-#
-#     q_ids_problem_solving = {}
-#     for idx,qid in enumerate(q_ids):
-#         q_ids_problem_solving[qid] = qid, img_ids[idx], ques_str[idx], all_answers[idx], ques_type_data[idx], ans_type_data[idx]
-#
-#     q_ids_problem_solving_res = {}
-#     for idx,qid in enumerate(qid_res):
-#         q_ids_problem_solving_res[qid] = qid, img_id_res[idx], softmax_vector[idx], pred_ans[idx]
-#
-#     ### make sure order of qid, img_id consistent between results and standard annotations files
-#     ## if not, sort them to what is there in the standar files
-#
-#     if qid_res != q_ids and img_id_res != img_ids:
-#         ### SAA and CNNN_LSTM in case for train set: we find a discrpancy so qids are nto a strict subset of qid_res
-#         if len((set(q_ids) & set(qid_res))) != len(set(q_ids)): #and len((set(img_ids) & set(img_id_res))) != len(set(img_ids)):
-#             print()
-#             print(' DISCREPANCY ALERT- FIRST_STAGE: q_ids: SIMILAR TO WHAT YOU SAW IN CASE OF SAA/CNN_LSTM WHEN YOU WERE TESTING ON TRAIN  ')
-#             target_q_ids = set(q_ids) & set(qid_res)
-#             print('THE LENGTH AT WHICH WE ARE LOOKIG AT: ', len(target_q_ids), 'AS OPPOSED TO ACTUAL: ', len(q_ids))
-#             print()
-#
-#         if len((set(img_ids) & set(img_id_res))) != len(set(img_ids)):
-#             print()
-#             print(' DISCREPANCY ALERT- SECOND_STAGE: img_ids: SIMILAR TO WHAT YOU SAW IN CASE OF SAA/CNN_LSTM WHEN YOU WERE TESTING ON TRAIN  ')
-#             target_img_ids = set(img_ids) & set(img_id_res)
-#             print('THE LENGTH AT WHICH WE ARE LOOKIG AT: ', len(target_img_ids), 'AS OPPOSED TO ACTUAL: ', len(img_ids))
-#             print()
-#
-#
-#         std_q_img_id = {}
-#         res_q_img_id_pans_ss_vc = {}
-#         for qid_idx, qid in enumerate(target_q_ids):
-#             key = str(qid) +  '_' + str(q_ids_problem_solving[qid][1]) #+  str(img_ids[qid_idx])
-#             std_q_img_id[key] = qid_idx
-#             key_new = str(qid) + '_' + str(q_ids_problem_solving_res[qid][1])
-#             res_q_img_id_pans_ss_vc[key_new] = q_ids_problem_solving_res[qid][3], q_ids_problem_solving_res[qid][2], qid, q_ids_problem_solving_res[qid][1]
-#
-#         target_keys = set(res_q_img_id_pans_ss_vc.keys()) & set(std_q_img_id.keys())
-#         target_keys = list(target_keys)
-#
-#
-#         if len(target_keys[0]) > 25:
-#             target_q_ids_from_keys = [int(i.rsplit('_', 2)[0]) for i in target_keys] #[i[:-26] for i in target_keys]
-#         else:
-#             target_q_ids_from_keys = [int(i.rsplit('_', 1)[0]) for i in target_keys]
-#
-#
-#         pred_ans_corr = [res_q_img_id_pans_ss_vc[key][0] for key in target_keys]#std_q_img_id.keys()]
-#         softmax_vector_corr = [res_q_img_id_pans_ss_vc[key][1] for key in target_keys]
-#         qid_corr = [res_q_img_id_pans_ss_vc[key][2] for key in target_keys]
-#         img_id_corr = [res_q_img_id_pans_ss_vc[key][3] for key in target_keys]
-#
-#
-#         img_id_corr2 = [q_ids_problem_solving[key][1] for key in target_q_ids_from_keys] #target_q_ids
-#         qid_corr2 = [q_ids_problem_solving[key][0] for key in target_q_ids_from_keys]
-#
-#         assert qid_corr==qid_corr2
-#         assert img_id_corr == img_id_corr2
-#
-#         ques_str_corr = [q_ids_problem_solving[key][2] for key in target_q_ids_from_keys]
-#         all_answers_corr = [q_ids_problem_solving[key][3] for key in target_q_ids_from_keys]
-#         ques_type_data_corr = [q_ids_problem_solving[key][4] for key in target_q_ids_from_keys]
-#         ans_type_data_corr = [q_ids_problem_solving[key][5] for key in target_q_ids_from_keys]
-#
-#         print(time.time() - st)
-#         return qid_corr, pred_ans_corr, softmax_vector_corr, img_id_corr, ques_str_corr, all_answers_corr, ques_type_data_corr, ans_type_data_corr     # ,gt_ans_used
 
 
 

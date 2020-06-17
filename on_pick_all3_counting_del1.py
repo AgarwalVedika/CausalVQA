@@ -14,7 +14,7 @@ import pylab as plot
 import random
 random.seed(1234)
 from utils_picking import intersect, round_percent, get_indices_diff_list_suffix, vqa_score_list,  worst_case_acc, ch_atleast_once
-from utils_picking_THESIS import my_read_old
+from utils_picking_thesis import my_read_old
 import argparse
 import matplotlib.patches as mpatches
 

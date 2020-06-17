@@ -73,7 +73,7 @@ We store the answer id, image id, question id and the softmax vector for our ana
 
 For analysis purpose- we select only those IQAs in original VQA v2 with uniform answer.
 The entire validation set is split into 90:10 where the former is used for testing, latter for validation. 
-One can find the original and edited QA files here: <PROVIDE ZIP FOLDER INLCUDING EVERYHTING>
+One can find the original and edited QA files here in the testing folder (within the zip folder downloaded above.) 
 
 For calculating flips ad accuracy, please edit the results paths in the config (Analysis section). Then run the following jupyter notebook.
 ```
@@ -81,11 +81,12 @@ flip_accuracy_cal_iv_vqa.ipynb # flip/acc for iv_vqa
 flip_accuracy_cal_cv_vqa.ipynb # flip/acc for cv_vqa     
 ```
 
+### Visualization- clicking tool
 We also visualize different IQA (original and edited) on basis of the difference in their softmax vector. We build a simple matplotlib based clicking 
 tool to achieve this. One might need to edit the paths in this code, but can re-use the clicking tool provided. 
 ```
-IV VQA: /BS/vedika2/nobackup/thesis/code/SNMN_analysis_codes/on_pick_all3.py 
-CV VQA: /BS/vedika2/nobackup/thesis/code/SNMN_analysis_codes/on_pick_all3_counting_del1.py
+python on_pick_all3.py  #iv_vqa
+python on_pick_all3_counting_del1.py  #cv_vqa
 ```
 
 

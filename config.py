@@ -48,4 +48,4 @@ results_edit_val_cnn_lstm_iv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_v
 results_edit_val_cnn_lstm_cv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_no_attn_counting.pickle'
 results_val_cnn_lstm = '/BS/vedika3/nobackup/pytorch-vqa/logs/val_no_attn_.pickle'
 standard_vocab_ans_file_cnn_lstm = '/BS/vedika3/nobackup/pytorch-vqa/vocab.json'
-s
+
