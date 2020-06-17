@@ -8,3 +8,5 @@
 /iv_vqa_generation/tagged_val2014_answers.json
 /iv_vqa_generation/tagged_val2014_questions.json
 
+/testing_iv_vqa/edited/
+/testing_iv_vqa/original/
