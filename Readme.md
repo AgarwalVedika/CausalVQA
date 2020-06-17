@@ -68,7 +68,21 @@ python cv_vqa_gen_qa.py  #QA
 ```
 
 
-## Analysis: Code coming soon
+## Analysis
+We store the answer id, image id, question id and the softmax vector for our analysis.
+
+For calculating flips ad accuracy
+```
+SNMN_analysis_codes/ON_PICKING_barplot_final_average_CVPR_also_used_for_REBUTTAL.ipynb
+```
+
+
+We also visualize different IQA (original and edited) on basis of the difference in their softmax vector. We build a simple matplotlib based clicking 
+tool to achieve this. 
+```
+IV VQA: /BS/vedika2/nobackup/thesis/code/SNMN_analysis_codes/on_pick_all3.py 
+CV VQA: /BS/vedika2/nobackup/thesis/code/SNMN_analysis_codes/on_pick_all3_counting_del1.py
+```
 
 
 ## Acknowledgements
