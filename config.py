@@ -33,27 +33,19 @@ cv_qa_test_dir_edit= 'testing/cv_vqa/edited'
 
 # SNMN
 results_edit_val_snmn_iv_vqa = '/BS/vedika2/nobackup/snmn/exp_vqa/eval_outputs_vqa_v2/vqa_v2_scratch_train/vqa_v2_edited_val2014_vqa_v2_scratch_train_15000_results.pickle'
+results_edit_val_snmn_cv_vqa = '/BS/vedika2/nobackup/snmn/exp_vqa/eval_outputs_vqa_v2/vqa_v2_scratch_train_25lr/vqa_v2_counting_del1_edited_val2014_vqa_v2_scratch_train_25lr_30_results.pickle'
 results_val_snmn = '/BS/vedika2/nobackup/snmn/exp_vqa/eval_outputs_vqa_v2/vqa_v2_scratch_train/vqa_v2_val2014_vqa_v2_scratch_train_15000_results.pickle'
 standard_vocab_ans_file_snmn = '/BS/vedika2/nobackup/snmn/exp_vqa/data/answers_vqa.txt'
 
 # SAAA
 results_edit_val_saaa_iv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_with_attn_.pickle'
+results_edit_val_saaa_cv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_with_attn_counting.pickle'
 results_val_saaa = '/BS/vedika3/nobackup/pytorch-vqa/logs/val_with_attn_.pickle'
 standard_vocab_ans_file_saaa = '/BS/vedika3/nobackup/pytorch-vqa/vocab.json'
 
 # CNN_LSTM
 results_edit_val_cnn_lstm_iv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_no_attn_.pickle'
+results_edit_val_cnn_lstm_cv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_no_attn_counting.pickle'
 results_val_cnn_lstm = '/BS/vedika3/nobackup/pytorch-vqa/logs/val_no_attn_.pickle'
 standard_vocab_ans_file_cnn_lstm = '/BS/vedika3/nobackup/pytorch-vqa/vocab.json'
-
-
-# cv_vqa
-# SNMN
-results_edit_val_snmn_cv_vqa = '/BS/vedika2/nobackup/snmn/exp_vqa/eval_outputs_vqa_v2/vqa_v2_scratch_train_25lr/vqa_v2_counting_del1_edited_val2014_vqa_v2_scratch_train_25lr_30_results.pickle'
-# SAAA
-results_edit_val_saaa_cv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_with_attn_.pickle'
-# CNN_LSTM
-results_edit_val_cnn_lstm_cv_vqa = '/BS/vedika3/nobackup/pytorch-vqa/logs/edit_val_no_attn_.pickle'
-
-
-
+s
