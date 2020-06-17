@@ -81,8 +81,8 @@ flip_accuracy_cal_iv_vqa.ipynb # flip/acc for iv_vqa
   
 ```
 
-# WORK IN PROGRESS   
-flip_accuracy_cal_cv_vqa.ipynb # flip/acc for cv_vqa    # WORK IN PROGRESS 
+## WORK IN PROGRESS   
+flip_accuracy_cal_cv_vqa.ipynb # flip/acc for cv_vqa   
 
 
 We also visualize different IQA (original and edited) on basis of the difference in their softmax vector. We build a simple matplotlib based clicking 
