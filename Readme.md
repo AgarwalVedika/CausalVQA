@@ -70,7 +70,10 @@ python cv_vqa_gen_qa.py  #QA
 
 
 ## Analysis
-We store the answer id, image id, question id and the softmax vector for our analysis.  <PROVIDE EXACTLY HOW YOU STORED- SAMPLE FILE?>
+
+We use 3 models: SNMN, SAAA and CNN+LSTM.  We train the models as decribed by the authors. 
+Make sure to save the answer id, image id, question id and the softmax vector (this helps for visualization) for analysis.  
+Keys used in analysis code to refer these are: 'ans_id', 'img_id', 'ques_id' and 'ss_vc'.
 
 For analysis purpose- we select only those IQAs in original VQA v2 with uniform answer.
 The entire validation set is split into 90:10 where the former is used for testing, latter for validation. 
@@ -84,7 +87,7 @@ flip_accuracy_cal_cv_vqa.ipynb # flip/acc for cv_vqa
 
 ### Visualization- clicking tool
 We also visualize different IQA (original and edited) on basis of the difference in their softmax vector. We build a simple matplotlib based clicking 
-tool to achieve this. One might need to edit the paths in this code, but can re-use the clicking tool provided. 
+tool to achieve this. One might need to edit the paths in this code, however can re-use the clicking tool provided. 
 ```
 python on_pick_all3.py  #iv_vqa
 python on_pick_all3_counting_del1.py  #cv_vqa
@@ -92,6 +95,16 @@ python on_pick_all3_counting_del1.py  #cv_vqa
 
 
 ## Acknowledgements
-Object removal code is inspired from the Object removal GAN repository (https://github.com/rakshithShetty/adversarial-object-removal).
+Object removal code is inspired from the Object removal GAN repository (https://github.com/rakshithShetty/adversarial-object-removal). 
+To train SNMN, SAAA and CNN+LSTM, we follow the code repositories below. CNN+LSTM is built by modifying SAAA code. 
+For SNMN: https://github.com/ronghanghu/snmn
+For SAAA: https://github.com/Cyanogenoid/pytorch-vqa
 
 
+## Miscellaneous
+For CNN+LSTM/SAAA and training these models using data augmentation while enforcing different consistency losses: one can take a look at 
+https://github.com/AgarwalVedika/pytorch-vqa. 
+Kindly note- the code repository is not cleaned and path editing would be required. The code snippets sure will be helpful.  
+
+
+ 
