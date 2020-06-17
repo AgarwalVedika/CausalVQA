@@ -20,11 +20,12 @@ Clone this repository with Git, and then enter the root directory of the reposit
 ```
 git clone https://github.com/AgarwalVedika/CausalVQA.git && cd CausalVQA
 ```
-
+Download this zip folder and extract everything to the CausalVQA directory:  
+https://drive.google.com/file/d/16TFNJLMYdkR1LrFL4MwqmNkjOjPOokUs/view?usp=sharing
 
 ## Dataset Generation
 
-We use a pre-trained object removal model. The model is available here: https://drive.google.com/file/d/1E5niomHg0jsnkXGVWj5yut_nbZ5T6grN/view?usp=sharing 
+We use a pre-trained object removal model. The model is available within the pre-trained models (within the zip folder downloaded above).  
 
 ### Generating IV-VQA dataset:
 
