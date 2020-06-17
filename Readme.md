@@ -97,8 +97,8 @@ python on_pick_all3_counting_del1.py  #cv_vqa
 ## Acknowledgements
 Object removal code is inspired from the Object removal GAN repository (https://github.com/rakshithShetty/adversarial-object-removal). 
 To train SNMN and SAAA, we follow the code repositories below. 
-For SNMN: https://github.com/ronghanghu/snmn
-For SAAA: https://github.com/Cyanogenoid/pytorch-vqa
+For SNMN: https://github.com/ronghanghu/snmn, 
+For SAAA: https://github.com/Cyanogenoid/pytorch-vqa.
 CNN+LSTM is built by modifying SAAA code. 
 
 ## Miscellaneous
