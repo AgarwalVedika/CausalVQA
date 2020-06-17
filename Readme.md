@@ -58,7 +58,7 @@ After this step, you will have all the images,questions and answers for IV-VQA d
 
 
 ### Generating CV-VQA dataset:
-Similarly we will generate the CV-VQA dataset, since words extraction was already doen above- no need to repeat this step. 
+Similarly we will generate the CV-VQA dataset, since words extraction was already done above- no need to repeat this step. 
 ```
 cd ./../cv_vqa_generation
 python cv_vqa_gen_images.py --input_mode train2014  #images

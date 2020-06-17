@@ -48,7 +48,7 @@ def my_read_old(results_old_pkl, standard_q_json, standard_a_json=None):
         if len((set(q_ids) & set(qid_res))) != len(set(q_ids)):
             ipdb.set_trace()
             print()
-            print(' DISCREPANCY ALERT- SIMILAR TO WHAT YOU SAW IN CASE OF SAA/CNN_LSTM WHEN YOU WERE TESTING ON TRAIN  ')
+            print(' DISCREPANCY ALERT ')
             print()
             target_q_ids = list((set(q_ids) & set(qid_res)))
         else:    ## ideally q_ids is a strict subset of res_qids...

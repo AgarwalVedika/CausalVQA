@@ -7,6 +7,5 @@
 /iv_vqa_generation/tagged_train2014_questions.json
 /iv_vqa_generation/tagged_val2014_answers.json
 /iv_vqa_generation/tagged_val2014_questions.json
-
-/testing_iv_vqa/edited/
-/testing_iv_vqa/original/
+/testing/cv_vqa/
+/testing/iv_vqa/
